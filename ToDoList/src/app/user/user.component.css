@@ -1,0 +1,45 @@
+.container{
+    padding-top: 10px;
+    padding-bottom: 0px;
+    min-height: 100vh;
+    position: relative;
+}
+
+button {
+    color: #90A4AE;
+    background: #455A64;
+    display: inline-block;
+}
+
+button:focus, button:hover{
+    background: #4DD0E1;
+    color: white;
+}
+
+.layer{
+    background: rgba(255,255,255, 0.1);
+    padding: 20px;
+    border-radius: 5px;
+    margin-top: 75px;
+    box-shadow: 5px 5px 75px 5px rgba(0,0,0, 0.3);
+    position: absolute;
+    top: 50%;
+    transform: translate(0, -50%);
+}
+
+mat-icon{
+    cursor: pointer;
+}
+
+@media (max-width: 991px) and (orientation: landscape){
+
+    .layer{
+        position: static;
+        top: 0;
+        left: 0;
+        transform: none;
+    }
+
+}
+
+

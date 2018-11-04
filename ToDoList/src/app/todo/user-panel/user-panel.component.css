@@ -1,0 +1,28 @@
+.container{
+    width: 100vw;
+    background: white;
+    z-index: 4;
+    height: 100vh;
+    position: relative;
+}
+
+.userProfil{
+    position: absolute;
+    top: 45%;
+    left: 55%;
+    transform: translate(-55%, -45%);
+    width: auto;
+}
+
+h3{
+    padding-bottom: 50px;
+}
+
+h4, p{
+    display: inline-block;
+    padding-right: 20px;
+}
+
+p{
+    font-size: 24px;
+}

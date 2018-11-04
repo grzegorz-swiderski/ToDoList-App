@@ -1,0 +1,44 @@
+<div class="container">
+  <div class="row">
+    <div class="col-12" *ngIf="task">
+      <mat-card>
+        <div class="row">
+          <div class="col-12">
+            <p>Edit task</p>
+          </div>
+          <div class="col-1">
+            <mat-form-field class="status">
+              <mat-select [(ngModel)]="task.status">
+                <mat-option *ngFor="let status of statuses" [value]="status" >
+                  {{status}}
+                </mat-option>
+              </mat-select>
+            </mat-form-field>
+          </div>
+          <div class="col-5">
+            <mat-form-field class="full">
+              <input [(ngModel)]="task.text" matInput>
+            </mat-form-field>
+          </div>
+          <div *ngIf="authService.user.displayName === 'Admin'" class="col-2" [ngStyle]="{'padding-left': '10px'}">
+            <mat-form-field class="full">
+              <mat-select [(ngModel)]="task.userName">
+                <mat-option *ngFor="let user of usersList" [(value)]="user.userName" (click)="userIdForChange(user.userId)">
+                  {{user.userName}}
+                </mat-option>
+              </mat-select>
+            </mat-form-field>
+          </div>
+          <div class="col-2 offset-2 btnContainer">
+            <button mat-mini-fab [routerLink]="['/todo']" matTooltip="Go back to Task List" color="primary">
+              <i class="material-icons">arrow_back</i>
+            </button>
+            <button (click)="changeTask()" mat-mini-fab matTooltip="Save Task's change" color="primary">
+              <i class="material-icons">save</i>
+            </button>
+          </div>
+        </div>
+      </mat-card>
+    </div>
+  </div>
+</div>

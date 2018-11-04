@@ -1,0 +1,60 @@
+.full{
+    width: 100%;
+    max-width: 500px;
+}
+
+form{
+    padding-top: 151px;
+}
+
+label, input, button{
+    display: block;
+}
+
+label{
+    color: white;
+    padding-top: 10px;
+}
+
+#loginError{
+   color: #c62828;
+   padding-top: 0;
+}
+
+input{
+    color: #90A4AE;
+}
+
+button{
+    color: #90A4AE;
+    border-radius: 20px;
+    margin-top: 10px;
+}
+
+button:hover {
+    background: #0097A7;
+    color: white;
+    transition: linear 0.2s;
+    transform: scale(1.1) translateY(-3px);
+    box-shadow: 0 20px 30px rgba(0,0,0, .5);
+}
+
+button:focus{
+    outline: none;
+}
+
+#routerLink{
+    text-align: center;
+    padding-top: 20px;
+}
+
+a{
+    color: white;
+    margin-top: 10px;
+}
+
+a:hover{
+    text-decoration: none;
+    transition: linear 0.2s;
+    color: #90A4AE;
+}

@@ -1,0 +1,59 @@
+ul{
+    list-style-type: none;
+    padding: 0 0;
+}
+
+li{
+    padding: 5px 5px;
+}
+
+mat-card{
+    padding: 2px 2px;
+}
+
+.status{
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 60px;
+}
+
+.taskText{
+    min-height: 1px;
+    font-size: 18px;
+    display: flex;
+    justify-content: right;
+    align-items: center;
+}
+
+p{
+    margin: 0;
+}
+
+.btnContainer{
+    padding: 10px;
+    display: flex;
+    justify-content:  center;
+    align-items: center;
+}
+
+.mat-mini-fab {
+    color: #90A4AE;
+    background: #455A64;
+    margin-left: 20px;
+}
+
+.mat-mini-fab:hover{
+    background: #0097A7;
+    color: white;
+    transition: linear 0.2s;
+    transform: scale(1.1) translateY(-3px);
+    box-shadow: 0 10px 10px rgba(0,0,0, .5);
+    outline: none;
+}
+
+.mat-mini-fab:focus{
+    outline: none;
+}
+

@@ -1,0 +1,70 @@
+.container{
+    background: white;
+    padding-bottom: 5px;
+    position: fixed;
+    padding-top: 50px;
+    z-index: 6;
+    width: 80vw;
+}
+
+.addTask{
+    margin-top: 20px;
+    height: 100px;
+    position: relative;
+    box-shadow: 1px 1px 2px 0px rgba(0,0,0, .5);
+}
+
+.inp {
+    position: absolute;
+    top: 60%;
+    transform: translateY(-60%);
+}
+
+.full{
+    width: 100%;
+}
+
+input{
+    color: black;
+}
+
+.btn{
+    position: absolute;
+    top: 50%;
+    left: 100%;
+    transform: translate(-100%, -50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.material-icons{
+    color: #90A4AE;
+}
+
+button:focus{
+    outline: none;
+}
+
+button:hover {
+    transition: linear 0.2s;
+    transform: scale(1.1) translateY(-3px);
+    box-shadow: 0 10px 10px rgba(0,0,0, .5);
+    background: #0097A7;
+}
+
+button:hover .material-icons {
+    color: white;
+    transition: linear 0.2s;
+    transform: scale(1.1);
+}
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,51 @@
+.container{
+    padding: 5px;
+}
+
+.card{
+    padding: 2px 2px;
+}
+
+mat-card{
+    padding: 2px 2px;
+}
+
+p{
+    background: #455A64;
+    color: white;  
+    padding: 5px 0px 5px 10px;
+}
+
+.status{
+    width: 110%;
+    margin-left: 8px;
+}
+
+.full{
+    width: 98%;
+    margin-left: 10px;
+    margin-right: 0;
+}
+
+
+.btnContainer{
+    padding-bottom: 10px;
+}
+
+.mat-mini-fab {
+    color: #90A4AE;
+    margin-left: 20px;
+}
+
+.mat-mini-fab:hover{
+    background: #0097A7;
+    color: white;
+    transition: linear 0.2s;
+    transform: scale(1.1) translateY(-3px);
+    box-shadow: 0 10px 10px rgba(0,0,0, .5);
+    outline: none;
+}
+
+.mat-mini-fab:focus{
+    outline: none;
+}

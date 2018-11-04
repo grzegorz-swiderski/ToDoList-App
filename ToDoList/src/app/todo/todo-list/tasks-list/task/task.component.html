@@ -1,0 +1,46 @@
+<ul>
+  <li *ngFor="let task of tasksList">
+    <mat-card>
+      <div class="row">
+        <div class="col-1">
+          <div [ngSwitch]="task.status">
+            <div *ngSwitchCase="'Ready'">
+              <div class="status" [ngStyle]="{'background-color': '#FBC02D'}">
+                <p>Ready</p>
+              </div>
+            </div>
+            <div *ngSwitchCase="'Work'">
+              <div class="status" [ngStyle]="{'background-color': '#E64A19'}">
+                <p>Work</p>
+              </div>
+            </div>
+            <div *ngSwitchCase="'Test'">
+              <div class="status" [ngStyle]="{'background-color': '#d32f2f'}">
+                <p>Test</p>
+              </div>
+            </div>
+            <div *ngSwitchCase="'Done'">
+              <div class="status" [ngStyle]="{'background-color': '#388E3C'}">
+                <p>Done</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-5 taskText">
+          <p [ngStyle]="{'font-style': 'italic'}">{{task.text}}</p>
+        </div>
+        <div class="col-4 taskText">
+          <p>{{task.userName}}</p>
+        </div>
+        <div class="col-2 btnContainer">
+          <button [routerLink]="[task._id]" mat-mini-fab matTooltip="Edit Task" color="primary">
+            <i class="material-icons">edit</i>
+          </button>
+          <button (click)="deleteTask(task)" mat-mini-fab matTooltip="Delete Task" color="primary">
+            <i class="material-icons">delete_sweep</i>
+          </button>
+        </div>
+      </div>
+    </mat-card>
+  </li>
+</ul>

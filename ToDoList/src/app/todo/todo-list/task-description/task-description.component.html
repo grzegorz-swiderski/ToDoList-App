@@ -1,0 +1,18 @@
+<div class="container">
+  <div class="row">
+    <div class="col-12 addTask">
+      <div class="row">
+        <div class="col-10 inp">
+          <mat-form-field class="full">
+            <input matInput [(ngModel)]="newTask" (keyup.enter)="addNewTask()" placeholder="New Task..." name="newTask">
+          </mat-form-field>
+        </div>
+        <div class="col-2 btn">
+          <button mat-fab (click)="addNewTask()" matTooltip="Add Task" color="primary">
+            <i class="material-icons">add</i>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

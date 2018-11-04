@@ -1,0 +1,43 @@
+nav {
+    display: block;
+    position: fixed;
+    background: #263238;
+    z-index: 0;
+    min-height: 100vh; 
+}
+
+.userPanel{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 30vh;
+    margin-top: 125px;
+}
+
+h3{
+    font-size: 24px;
+    color: white;
+    text-align: center;
+    padding-top: 30px;
+}
+
+.mat-raised-button {
+    margin-bottom: 15px;
+    color: #90A4AE;
+    display: block;
+    border-radius: 20px;
+    width: 100px;
+}
+
+button:hover{
+    background: #0097A7;
+    color: white;
+    transition: linear 0.2s;
+    transform: scale(1.1) translateY(-3px);
+    box-shadow: 0 20px 30px rgba(0,0,0, .5);
+    outline: none;
+}
+
+button:focus{
+    outline: none;
+}
