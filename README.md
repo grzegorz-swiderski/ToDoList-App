@@ -6,7 +6,7 @@ This project was created, beacuse I wanted to learn all components from MEAN Sta
 
 ## Technologies
 
-Project is created with:
+Project was created with:
 * Angular 6
 * Node.js 8.11.3
 * MongoDB 3.1.3
