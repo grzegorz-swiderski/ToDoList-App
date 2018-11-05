@@ -8,29 +8,36 @@ This project was created, beacuse I wanted to learn all components from MEAN Sta
 
 Project is created with:
 * Angular 6
-* Firebase 5.5.1
 * Node.js 8.11.3
 * MongoDB 3.1.3
 * Express.js 4.16.3
+* Firebase 5.5.1
 
 ## Setup
 
-### Backend
+To run this project:
 
-npm install --save-dev babel-watch
+### For Backend
 
-npm install --save-dev babel-core
+Open terminal in folder: Backend, and then install this locally using npm:
 
-npm install babel-preset-env --save
+```
+$ npm install --save-dev babel-watch
+$ npm install --save-dev babel-core
+$ npm install babel-preset-env --save
+$ npm install express
+$ npm install cors
+$ npm install body-parser
+$ npm install mongoose
+$ npm run dev
+```
 
-npm install express
+### For Front and using application
 
-npm install cors
+Open terminal in folder: ToDoList, and then install this locally using npm:
 
-npm install body-parser
-
-npm install mongoose
-
-### Front
-
-npm install 
+```
+$ npm install 
+$ ng serve --open
+```
+## After all installation you can using my ToDo List. Enjoy!
