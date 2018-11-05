@@ -40,4 +40,4 @@ Open terminal in folder: ToDoList, and then install it locally using npm:
 $ npm install 
 $ ng serve --open
 ```
-## After all installation you can using my ToDo List. Enjoy!
+## Have a nice use!
