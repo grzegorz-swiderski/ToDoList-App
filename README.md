@@ -32,7 +32,7 @@ $ npm install mongoose
 $ npm run dev
 ```
 
-### For Front and using application
+### For Frontend
 
 Open terminal in folder: ToDoList, and then install it locally using npm:
 
