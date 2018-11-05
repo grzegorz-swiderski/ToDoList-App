@@ -25,7 +25,7 @@ input{
     color: #90A4AE;
 }
 
-button{
+.mat-raised-button{
     color: #90A4AE;
     border-radius: 20px;
     margin-top: 10px;
