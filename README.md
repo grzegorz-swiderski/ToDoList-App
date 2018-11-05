@@ -2,7 +2,7 @@
 
 ## General info
 
-This project was created, because I wanted to learn all components from MEAN Stack. The application is simple ToDo list. User can sign in and sign up in his account and then he can create, edit, and delete his tasks. The application has a main user. A little suggestion: if you want be an administrator, when you will be sign up, as your name you should write : "Admin" :) . 
+This project was created, because I wanted to learn all components from MEAN Stack. The application is simple ToDo list. User can sign in and sign up in his account and then he can create, edit, and delete his tasks. The application has a main user. A little suggestion: if you want be an administrator, when you will be sign up, as your name you should write : "Admin" :). 
 
 ## Technologies
 
