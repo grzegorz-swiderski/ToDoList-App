@@ -14,3 +14,23 @@ Project is created with:
 * Express.js 4.16.3
 
 ## Setup
+
+### Backend
+
+npm install --save-dev babel-watch
+
+npm install --save-dev babel-core
+
+npm install babel-preset-env --save
+
+npm install express
+
+npm install cors
+
+npm install body-parser
+
+npm install mongoose
+
+### Front
+
+npm install 
