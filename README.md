@@ -19,7 +19,7 @@ To run this project:
 
 ### For Backend
 
-Open terminal in folder: Backend, and then install this locally using npm:
+Open terminal in folder: Backend, and then install it locally using npm:
 
 ```
 $ npm install --save-dev babel-watch
@@ -34,7 +34,7 @@ $ npm run dev
 
 ### For Front and using application
 
-Open terminal in folder: ToDoList, and then install this locally using npm:
+Open terminal in folder: ToDoList, and then install it locally using npm:
 
 ```
 $ npm install 
