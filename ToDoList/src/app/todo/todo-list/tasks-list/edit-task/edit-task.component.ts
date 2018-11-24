@@ -51,7 +51,9 @@ export class EditTaskComponent implements OnInit {
       userName: this.task.userName,
       userId: this.task.userId,
       text: this.task.text,
-      status: this.task.status
+      status: this.task.status,
+      sort: this.task.sort,
+      create: this.task.create
     });
     this.tasksService.changeTask(task).subscribe();
     alert("Change saved!");

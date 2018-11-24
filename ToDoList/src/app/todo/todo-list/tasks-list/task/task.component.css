@@ -5,6 +5,7 @@ ul{
 
 li{
     padding: 5px 5px;
+    cursor: move;
 }
 
 mat-card{

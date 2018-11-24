@@ -1,6 +1,6 @@
 <div class="container">
   <div class="row">
-    <div class="offset-1 col-10">
+    <div class="col-12 offset-sm-1 col-sm-10">
       <form (ngSubmit)="login(loginForm)" #loginForm="ngForm">
         <div>
           <label for="userLogin">E-MAIL:</label>
@@ -30,7 +30,7 @@
           </label>
           <button mat-raised-button type="submit" color="primary">Log in</button>
           <label id="routerLink">
-            <a routerLink='/user/registration'>I don't have a profile, I would like registration</a>
+            <a routerLink='/user/registration'>I don't have a profile, I'd like to registration</a>
           </label>
         </div>
       </form>

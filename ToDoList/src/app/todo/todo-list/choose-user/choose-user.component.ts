@@ -16,7 +16,9 @@ export class ChooseUserComponent {
   usersList: Array<User>;
   user = this.authService.user;
 
-  constructor( public tasksService: TasksService, private router: Router, public authService: AuthService ) { }
+  constructor( public tasksService: TasksService, 
+    private router: Router, 
+    public authService: AuthService ) { }
 
   ngOnInit() {
     this.getUsers();

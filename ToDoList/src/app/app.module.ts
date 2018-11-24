@@ -13,13 +13,14 @@ import { TaskComponent } from './todo/todo-list/tasks-list/task/task.component';
 import { EditTaskComponent } from './todo/todo-list/tasks-list/edit-task/edit-task.component';
 import { HttpClientModule } from '@angular/common/http';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { MatButtonModule, MatCheckboxModule, MatInputModule, MatDialogModule, MatCardModule } from '@angular/material';
+import { MatButtonModule, MatCheckboxModule, MatInputModule, MatDialogModule, MatCardModule, MatNativeDateModule } from '@angular/material';
 import { MatTooltipModule } from '@angular/material/tooltip';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatIconModule } from '@angular/material/icon';
 import { MatRadioModule } from '@angular/material/radio';
 import { MatSelectModule } from '@angular/material/select';
 import { MatMenuModule } from '@angular/material/menu';
+import { MatDatepickerModule } from '@angular/material/datepicker';
 import { AppRoutingModule } from './app-routing.module';
 import { AngularFireModule } from 'angularfire2';
 import { AngularFireAuthModule } from 'angularfire2/auth';
@@ -31,6 +32,8 @@ import { NavbarComponent } from './todo/navbar/navbar.component';
 import { TodoComponent } from './todo/todo.component';
 import { UserPanelComponent } from './todo/user-panel/user-panel.component';
 import { TaskTableComponent } from './todo/todo-list/task-table/task-table.component';
+import { DragDropModule } from '@angular/cdk/drag-drop';
+import { MatSidenavModule } from '@angular/material/sidenav';
 
 @NgModule({
   declarations: [
@@ -66,9 +69,13 @@ import { TaskTableComponent } from './todo/todo-list/task-table/task-table.compo
     MatRadioModule,
     MatSelectModule,
     MatMenuModule,
+    MatDatepickerModule,
+    MatNativeDateModule,
+    MatSidenavModule,
     AngularFireModule.initializeApp(environment.firebaseConfig),
     AngularFireAuthModule,
     AppRoutingModule,
+    DragDropModule
   ],
   providers: [TasksService, AuthService, AuthGuardService],
   bootstrap: [AppComponent]

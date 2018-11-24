@@ -38,6 +38,7 @@ Open terminal in folder: ToDoList, and then install it locally using npm:
 
 ```
 $ npm install 
+$ npm install -g @angular/cli
 $ ng serve --open
 ```
 ## Have a nice use!

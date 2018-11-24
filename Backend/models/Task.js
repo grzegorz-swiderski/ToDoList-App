@@ -14,6 +14,12 @@ let Task = new Schema ({
     },
     userName: {
         type: String
+    },
+    sort: {
+        type: Number
+    },
+    create: {
+        type: String
     }
 })
 

@@ -4,6 +4,7 @@ import { User } from 'firebase';
 import { AuthService } from '../../../../services/auth.service';
 import { TasksService } from '../../../../services/tasksService.service';
 import { Task } from '../../../../models/task';
+import {CdkDragDrop, moveItemInArray, CdkDrag} from '@angular/cdk/drag-drop';
 
 @Component({
   selector: 'app-task',
@@ -31,20 +32,28 @@ export class TaskComponent implements OnInit {
 
   getTasks() {
     this.tasksService.getTasks().subscribe((data: Array<Task>) => {
-      this.tasksList = data;
-      console.log(data);
+      this.tasksList = data
+      .sort((a, b) : any => {
+        return a.sort - b.sort;
+      })
+      console.log(this.tasksList);
     })
   }
 
   getTasksList() {
-    this.tasksService.getTasksList().subscribe((data) => {
-      this.tasksList.push(data);
+    this.tasksService.getTasksList().subscribe((task) => {
+      this.tasksList.push(task);
+      task.sort = this.tasksList.length-1;
+      this.tasksService.changeTask(task).subscribe();
     })
   }
 
   getTaskByUserId() {
-    this.tasksService.getTaskByUserId(this.user.uid).subscribe(task => {
-      this.tasksList = task;
+    this.tasksService.getTaskByUserId(this.user.uid).subscribe(data => {
+      this.tasksList = data
+      .sort((a, b) : any => {
+        return a.sort - b.sort;
+      })
     })
   }
 
@@ -53,19 +62,30 @@ export class TaskComponent implements OnInit {
       if(user.userName === "Admin"){
         return this.getTasks();
       }
-      this.tasksService.getTaskByUserId(user.userId).subscribe(task => {
-        this.tasksList = task;
+      this.tasksService.getTaskByUserId(user.userId).subscribe(data => {
+        this.tasksList = data
+        .sort((a, b) : any => {
+          return a.sort - b.sort;
+        })
       })
     })
   }
 
   deleteTask(task: Task) {
     let id = task._id;
-    this.tasksService.deleteTask(id).subscribe(task => {
-      console.log(task);
-    });
+    this.tasksService.deleteTask(id).subscribe();
     this.tasksList = this.tasksList.filter(h => h !== task);
 
   }
 
+  drop(event: CdkDragDrop<Array<Task>>) {
+    moveItemInArray(this.tasksList, event.previousIndex, event.currentIndex);
+    console.log(event.currentIndex);
+    this.tasksList.forEach( (value, index) => {
+      value.sort = index;
+      this.tasksService.changeTask(value).subscribe(s => {
+        console.log(s);
+      })
+    });
+  }
 }

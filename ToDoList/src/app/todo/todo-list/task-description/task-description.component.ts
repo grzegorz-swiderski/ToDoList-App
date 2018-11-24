@@ -29,7 +29,10 @@ export class TaskDescriptionComponent implements OnInit {
       userName: this.authService.user.displayName, 
       userId: this.authService.user.uid, 
       text: this.newTask, 
-      status: "Ready" });
+      status: "Ready",
+      sort: 0,
+      create: new Date().toLocaleString()
+    });
     if (task.text) {
       this.tasksService.postTask(task).subscribe((task) => {
         this.taskToSend = task;

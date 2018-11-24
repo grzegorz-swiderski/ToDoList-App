@@ -5,17 +5,6 @@
     position: relative;
 }
 
-button {
-    color: #90A4AE;
-    background: #455A64;
-    display: inline-block;
-}
-
-button:focus, button:hover{
-    background: #4DD0E1;
-    color: white;
-}
-
 .layer{
     background: rgba(255,255,255, 0.1);
     padding: 20px;
@@ -24,20 +13,54 @@ button:focus, button:hover{
     box-shadow: 5px 5px 75px 5px rgba(0,0,0, 0.3);
     position: absolute;
     top: 50%;
-    transform: translate(0, -50%);
+    transform: translateY( -50%);
 }
 
 mat-icon{
     cursor: pointer;
 }
 
-@media (max-width: 991px) and (orientation: landscape){
+@media (max-width: 331px){
 
     .layer{
-        position: static;
-        top: 0;
-        left: 0;
-        transform: none;
+        top: 5%;
+        transform: translateY(-10%);
+    }
+
+}
+
+@media (min-width: 332px) and (max-width: 767px) {
+
+    .layer{
+        top: 25%;
+        transform: translateY(-25%);
+    }
+
+}
+
+@media (max-width: 569px) and (orientation: landscape) {
+
+    .container{
+        min-height: 200vh;
+    }
+
+    .layer{
+        width: 80%;
+        top: 0%;
+        left: 50%;
+        transform: translate(-50%, -0%);
+    }
+}
+
+@media (min-width: 570px) and (max-width: 991px) and (orientation: landscape) {
+
+    .container{
+        min-height: 165vh;
+    }
+
+    .layer{
+        top: 0%;
+        transform: translateY(-0%);
     }
 
 }

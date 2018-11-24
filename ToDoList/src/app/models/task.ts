@@ -6,4 +6,6 @@ export interface Task {
     userId: string,
     text: string,
     status: string,
+    sort: number,
+    create: string
 }

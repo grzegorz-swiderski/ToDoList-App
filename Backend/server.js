@@ -52,6 +52,8 @@ router.route('/tasks/update/:id').post((req, res) => {
         task.userName = req.body.userName;
         task.userId = req.body.userId;
         task.status = req.body.status;
+        task.sort = req.body.sort;
+        task.create = req.body.create;
         task.save()
         .then(task => {
             res.json('Update done');
