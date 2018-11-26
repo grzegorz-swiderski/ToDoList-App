@@ -2,7 +2,7 @@ mat-card{
     padding: 2px 2px;
     cursor: move;
     margin-bottom: 10px;
-    width: 96.5%;
+    width: 98%;
 }
 
 .status{
@@ -21,9 +21,7 @@ mat-card{
     align-items: center;
 }
 
-p{
-    margin: 0;
-}
+
 
 .btnContainer{
     padding: 10px;
