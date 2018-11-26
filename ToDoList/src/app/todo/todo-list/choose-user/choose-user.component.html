@@ -1,10 +1,13 @@
-<div class="container">
-  <div class="row">
-    <div *ngIf="authService.user.displayName === 'Admin'; then chooseUser; else thisUser">
+<div class="row">
+  <div class="menu">
+    <div class="row">
+      <div *ngIf="authService.user.displayName === 'Admin'; then chooseUser; else thisUser">
 
+      </div>
     </div>
   </div>
 </div>
+
 
 <ng-template #chooseUser>
   <div class="offset-9 col-3 name">
@@ -17,9 +20,9 @@
 
     <mat-menu #menu="matMenu" [overlapTrigger]="false">
       <button mat-menu-item [matMenuTriggerFor]="userTasksList">Choose User's Task List</button>
-      <button mat-menu-item (click)="logout()" id="logoutBtn">Logout</button>  
+      <button mat-menu-item (click)="logout()" id="logoutBtn">Logout</button>
     </mat-menu>
-    
+
     <mat-menu #userTasksList="matMenu">
       <button *ngFor="let user of usersList" mat-menu-item [value]="user.userName" (click)="getNewUser(user.userName, user.userId)">
         {{user.userName}}</button>
@@ -37,9 +40,9 @@
     </button>
 
     <mat-menu #menu="matMenu" [overlapTrigger]="false">
-      <button mat-menu-item (click)="logout()" id="logoutBtn">Logout</button>  
+      <button mat-menu-item (click)="logout()" id="logoutBtn">Logout</button>
     </mat-menu>
-    
+
     <mat-menu #userTasksList="matMenu">
       <button *ngFor="let user of usersList" mat-menu-item [value]="user.userName" (click)="getNewUser(user.userName, user.userId)">
         {{user.userName}}</button>

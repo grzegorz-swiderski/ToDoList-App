@@ -1,6 +1,22 @@
 .container{
-    width: 100vw;
     background: white;
+    display: block;
 }
 
+.ctnForLandscape {
 
+    display: none
+}
+
+@media (max-width: 767px) and (orientation: landscape) {
+
+    .container{
+        display: none;
+    }
+
+    .ctnForLandscape {
+        background: white;
+        display: block;
+    }
+
+}

@@ -6,19 +6,25 @@ nav {
     min-height: 100vh; 
 }
 
+.appName{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+h3{
+    padding-top: 40px;
+    font-size: 24px;
+    color: white;
+    margin-bottom: 0px;
+}
+
 .userPanel{
     display: flex;
     justify-content: center;
     align-items: center;
     height: 30vh;
     margin-top: 125px;
-}
-
-h3{
-    font-size: 24px;
-    color: white;
-    text-align: center;
-    padding-top: 30px;
 }
 
 .mat-raised-button {
@@ -45,7 +51,61 @@ button:focus{
 @media (max-width: 767px){
 
     nav {
-        display: none;
+        display: inline-block;
+        z-index: 30;
+        min-height: 1px;
+        height: 90px;
+        width: 100%;
+    }
+
+    h3{
+        padding-top: 0px;
+        font-size: 18px;
+    }
+
+    .userPanel{
+        height: 90px;
+        margin-top: auto;
+    }
+
+    .mat-raised-button{
+        display: inline-block;
+        width: 80px;
+        margin: 10px;
+        font-size: 12px;
     }
  
+}
+
+@media (max-width: 767px) and (orientation: landscape) {
+
+    nav {
+        display: inline-block;
+        z-index: 30;
+        min-height: 1px;
+        height: 60px;
+        width: 100%;
+    }
+
+    .userPanel{
+        height: 60px;
+        margin-top: auto;
+    }
+
+    button{
+        transform: scale(0.8);
+    }
+
+    button:hover {
+        transform: scale(0.9) translateY(-3px);
+        box-shadow: 0 10px 10px rgba(0,0,0, .5);
+    }
+
+}
+
+@media (max-width: 569px) and (orientation: landscape) {
+
+    .userPanel{
+        justify-content: flex-end;
+    }
 }

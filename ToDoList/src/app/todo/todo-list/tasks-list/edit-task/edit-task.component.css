@@ -1,13 +1,7 @@
-.container{
-    padding: 5px;
-}
-
-.card{
-    padding: 2px 2px;
-}
-
 mat-card{
     padding: 2px 2px;
+    margin-bottom: 10px;
+    width: 96.5%;
 }
 
 p{
@@ -49,3 +43,63 @@ p{
 .mat-mini-fab:focus{
     outline: none;
 }
+
+@media (max-width: 767px) {
+
+    .full{
+        width: 90%;
+    }
+
+}
+
+@media (max-width: 569px) and  (orientation: landscape) {
+
+    mat-card{
+        width: 93%;
+        margin-left: 20px;
+    }
+
+    .btnContainer{
+        display: flex;
+        justify-content:  flex-end;
+    }
+
+    button{
+        margin-right: 20px;
+        transform: scale(0.8);
+    }
+
+    button:hover {
+        transform: scale(0.9) translateY(-3px);
+        box-shadow: 0 10px 10px rgba(0,0,0, .5);
+    }
+
+}
+
+@media (min-width: 570px) and (max-width: 767px) and (orientation: landscape) {
+
+    mat-card{
+        width: 93%;
+        margin-left: 20px;
+    }
+
+    mat-select {
+        font-size: 12px;
+    }
+
+    input {
+        font-size: 12px;
+
+    }
+
+    button{
+        transform: scale(0.8);
+    }
+
+    button:hover {
+        transform: scale(0.9) translateY(-3px);
+        box-shadow: 0 10px 10px rgba(0,0,0, .5);
+    }
+
+}
+

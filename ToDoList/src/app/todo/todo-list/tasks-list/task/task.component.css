@@ -1,15 +1,8 @@
-ul{
-    list-style-type: none;
-    padding: 0 0;
-}
-
-li{
-    padding: 5px 5px;
-    cursor: move;
-}
-
 mat-card{
     padding: 2px 2px;
+    cursor: move;
+    margin-bottom: 10px;
+    width: 96.5%;
 }
 
 .status{
@@ -56,5 +49,81 @@ p{
 
 .mat-mini-fab:focus{
     outline: none;
+}
+
+@media (max-width: 767px){
+
+    .status{
+        justify-content: right;
+        height: 40px;
+    }
+
+    p{
+        padding: 5px 0 5px 10px;
+    }
+
+}
+
+@media (max-width: 569px) and  (orientation: landscape) {
+
+    mat-card{
+        width: 93%;
+        margin-left: 20px;
+    }
+
+    .status{
+        height: 30px;
+    }
+
+    p{
+        font-size: 12px;
+    }
+
+    .btnContainer{
+        justify-content:  flex-end;
+    }
+
+    button{
+        margin-right: 20px;
+        transform: scale(0.8);
+    }
+
+    button:hover {
+        transform: scale(0.9) translateY(-3px);
+        box-shadow: 0 10px 10px rgba(0,0,0, .5);
+    }
+
+}
+
+@media (min-width: 570px) and (max-width: 767px) and (orientation: landscape) {
+
+    mat-card{
+        width: 93%;
+        margin-left: 20px;
+    }
+
+    .status{
+        justify-content: right;
+        height: 60px;
+        width: 75%;
+    }
+
+    p{
+        font-size: 14px;
+    }
+
+    .taskData{
+        padding-left: 0;
+    }
+
+    button{
+        transform: scale(0.8);
+    }
+
+    button:hover {
+        transform: scale(0.9) translateY(-3px);
+        box-shadow: 0 10px 10px rgba(0,0,0, .5);
+    }
+
 }
 

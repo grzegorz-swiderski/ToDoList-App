@@ -1,7 +1,6 @@
 .container{
     width: 100vw;
-    background: white;
-    z-index: 4;
+    background: white;;
     height: 100vh;
     position: relative;
 }
@@ -15,7 +14,7 @@
 }
 
 h3{
-    padding-bottom: 50px;
+    padding-bottom: 20px;
 }
 
 h4, p{
@@ -25,4 +24,60 @@ h4, p{
 
 p{
     font-size: 24px;
+}
+
+.ctnForLandscape {
+    position: relative;
+    display: none;
+    width: 100vw;
+    background: white;;
+    height: 100vh;
+}
+
+@media (max-width: 767px) {
+
+    .container{
+        display: none;
+    }
+
+    .ctnForLandscape {
+        background: white;
+        display: block;
+    }
+
+    .userProfil{
+        position: absolute;
+        top: 50%;
+        left: 10%;
+        transform: translate(-10%, -50%);
+        width: auto;
+    }
+
+    h3{
+        font-size: 22px;
+    }
+
+    h4 {
+        padding-right: 20px;
+        font-size: 18px;
+    }
+    
+    p{
+        font-size: 14px;
+        padding: 0;
+    }
+
+}
+
+@media (max-width: 767px) and (orientation: landscape) {
+
+    .userProfil{
+        position: absolute;
+        top: 50%;
+        left: 60%;
+        transform: translate(-60%, -50%);
+        display: inline-block;
+        width: 100%;
+    }
+
 }

@@ -1,16 +1,33 @@
-.container{
-    background: white;
-    padding-top: 135px;
-    z-index: 1;
-    padding-left: 5px;
-}
-
 .tasksList{
     background: white;
     overflow-y: hidden; 
     min-height: 85vh;
     padding-left: 10px;
+    padding-top: 135px;
+    margin-left: 5px;
 }
 
+@media (max-width: 767px){
 
+    .tasksList{
+        margin-top: 15px;
+    }
+
+}
+
+@media(max-width: 569px) and (orientation: landscape) {
+
+    .tasksList{
+        padding-top: 85px;
+    }
+
+}
+
+@media(min-width: 570px) and  (max-width: 767px) and (orientation: landscape) {
+
+    .tasksList{
+        margin-top: 5px;
+    }
+
+}
 
