@@ -1,5 +1,4 @@
 .container{
-    width: 100vw;
     background: white;;
     height: 100vh;
     position: relative;
@@ -7,10 +6,8 @@
 
 .userProfil{
     position: absolute;
-    top: 45%;
-    left: 55%;
-    transform: translate(-55%, -45%);
-    width: auto;
+    top: 50%;
+    transform: translateY(-50%);
 }
 
 h3{
@@ -26,32 +23,9 @@ p{
     font-size: 24px;
 }
 
-.ctnForLandscape {
-    position: relative;
-    display: none;
-    width: 100vw;
-    background: white;;
-    height: 100vh;
-}
+
 
 @media (max-width: 767px) {
-
-    .container{
-        display: none;
-    }
-
-    .ctnForLandscape {
-        background: white;
-        display: block;
-    }
-
-    .userProfil{
-        position: absolute;
-        top: 50%;
-        left: 10%;
-        transform: translate(-10%, -50%);
-        width: auto;
-    }
 
     h3{
         font-size: 22px;
@@ -65,19 +39,6 @@ p{
     p{
         font-size: 14px;
         padding: 0;
-    }
-
-}
-
-@media (max-width: 767px) and (orientation: landscape) {
-
-    .userProfil{
-        position: absolute;
-        top: 50%;
-        left: 60%;
-        transform: translate(-60%, -50%);
-        display: inline-block;
-        width: 100%;
     }
 
 }

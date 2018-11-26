@@ -1,10 +1,10 @@
 .menu{
+    padding-top: 10px;
     background: white;
     z-index: 10;
     position: fixed;
     width: 81%;
-    margin-left: 10px;
-    margin-top: 20px; 
+    left: 17%;
 }
 
 .full{
@@ -37,7 +37,8 @@ button:focus{
     .menu{
         padding-top: 100px;
         padding-bottom: 50px;
-        width: 95%;
+        width: 100%;
+        left: 0;
     } 
 
 }
@@ -45,7 +46,7 @@ button:focus{
 @media (max-width: 767px) and (orientation: landscape){ 
 
     .menu{
-        padding-top: 50px;
+        padding-top: 60px;
         padding-bottom: 50px;
         width: 100%;
     } 
@@ -56,4 +57,21 @@ button:focus{
 
 }
 
+@media (min-width: 768px) and (max-width: 991px) { 
+ 
+    .menu{
+        padding-top: 10px;
+        padding-bottom: 50px;
+        width: 81%;
+    } 
 
+}
+
+@media (min-width: 992px) and (max-width: 1199px) { 
+ 
+    .menu{
+        padding-top: 10px;
+        padding-bottom: 50px;
+    } 
+
+}

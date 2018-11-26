@@ -3,10 +3,10 @@
     background: white;
     position: fixed;
     z-index: 16;
-    margin-left: 10px;
     margin-top: 75px;
     height: 100px;
     box-shadow: 1px 1px 2px 0px rgba(0,0,0, .5);
+    left: 17%;
 }
 
 .inp{
@@ -58,9 +58,9 @@ button:hover .material-icons {
 
     .addTask{
         margin-top: 175px;
-        width: 94%;
+        width: 100%;
+        left: 0;
     } 
-
 }
 
 @media (max-width: 767px) and (orientation: landscape){ 
@@ -68,8 +68,9 @@ button:hover .material-icons {
     .addTask{
         margin-top: 115px;
         width: 96%;
-        margin-left: 30px;
+        margin-left: 10px;
         height: 75px;
+        left: 0;
     }
 
     mat-form-field{
@@ -84,7 +85,31 @@ button:hover .material-icons {
         transition: linear 0.2s;
         transform: scale(0.9) translateY(-3px);
         box-shadow: 0 10px 10px rgba(0,0,0, .5);
-        background: #0097A7;
+    }
+
+}
+
+@media (min-width: 768px) and (max-width: 991px) { 
+
+    .addTask{
+        margin-top: 65px;
+        width: 83%;
+        height: 75px;
+        left: 16%;
+    }
+
+    mat-form-field{
+        font-size: 14px;
+    }
+
+    button{
+        transform: scale(0.9);
+    }
+
+    button:hover {
+        transition: linear 0.2s;
+        transform: scale(1) translateY(-3px);
+        box-shadow: 0 10px 10px rgba(0,0,0, .5);
     }
 
 }

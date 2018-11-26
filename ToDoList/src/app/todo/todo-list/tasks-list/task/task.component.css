@@ -2,7 +2,7 @@ mat-card{
     padding: 2px 2px;
     cursor: move;
     margin-bottom: 10px;
-    width: 98%;
+    width: 97%;
 }
 
 .status{
@@ -21,7 +21,9 @@ mat-card{
     align-items: center;
 }
 
-
+p{
+    margin: 0;
+}
 
 .btnContainer{
     padding: 10px;
@@ -57,7 +59,8 @@ mat-card{
     }
 
     p{
-        padding: 5px 0 5px 10px;
+        padding-left: 10px;
+        margin: 0;
     }
 
 }
@@ -75,6 +78,7 @@ mat-card{
 
     p{
         font-size: 12px;
+        margin: 0;
     }
 
     .btnContainer{
@@ -101,13 +105,14 @@ mat-card{
     }
 
     .status{
-        justify-content: right;
-        height: 60px;
+        min-height: 60px;
+        height: 100%;
         width: 75%;
     }
 
     p{
         font-size: 14px;
+        margin: 0;
     }
 
     .taskData{
@@ -125,3 +130,43 @@ mat-card{
 
 }
 
+@media (min-width: 768px) and (max-width: 991px) { 
+
+    .status{
+        min-height: 60px;
+        height: 100%;
+        width: 75%;
+        padding-left: 5px;
+    }
+
+    p{
+        font-size: 14px;
+        margin: 0;
+    }
+
+    button{
+        transform: scale(0.8);
+    }
+
+    button:hover {
+        transform: scale(0.9) translateY(-3px);
+        box-shadow: 0 10px 10px rgba(0,0,0, .5);
+    }
+
+}
+
+@media (min-width: 992px) and (max-width: 1199px) { 
+ 
+    .status{
+        min-height: 60px;
+        height: 100%;
+        width: 75%;
+        padding-left: 5px;
+    }
+
+    p{
+        font-size: 16px;
+        margin: 0;
+    }
+
+}

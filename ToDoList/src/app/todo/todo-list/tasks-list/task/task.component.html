@@ -2,7 +2,7 @@
   <div class="col-12" cdkDropList (cdkDropListDropped)="drop($event)">
     <mat-card *ngFor="let task of tasksList" cdkDrag [cdkDragData]="task">
       <div class="row">
-        <div class="col-12 col-sm-2 col-md-1">
+        <div class="col-12 col-sm-2 col-md-2 col-lg-2 col-xl-1">
           <div [ngSwitch]="task.status">
             <div *ngSwitchCase="'Ready'">
               <div class="status" [ngStyle]="{'background-color': '#FBC02D'}">
@@ -26,16 +26,16 @@
             </div>
           </div>
         </div>
-        <div class="col-12 col-sm-3 col-md-4 taskText">
+        <div class="col-12 col-sm-3 col-md-3 col-lg-3 col-xl-4 taskText">
           <p [ngStyle]="{'font-style': 'italic'}" class="taskData">{{task.text}}</p>
         </div>
-        <div class="col-12 col-sm-2 col-md-1 taskText">
+        <div class="col-12 col-sm-2 col-md-2 col-lg-2 col-xl-3 taskText">
           <p class="taskData">{{task.userName}}</p>
         </div>
-        <div class="col-12 col-sm-2 col-md-4">
+        <div class="col-12 col-sm-2 col-md-3 col-lg-3 col-xl-2">
           <p class="taskData">{{task.create}}</p>
         </div>
-        <div class="offset-6 col-6 offset-sm-0 col-sm-3 offset-md-0 col-md-2 btnContainer">
+        <div class="offset-6 col-6 offset-sm-0 col-sm-3 offset-md-0 col-md-1 col-lg-1 col-xl-2 btnContainer">
           <button [routerLink]="[task._id]" mat-mini-fab matTooltip="Edit Task" color="primary">
             <i class="material-icons">edit</i>
           </button>
