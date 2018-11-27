@@ -1,8 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
-import { TasksService } from '../../services/tasksService.service';
-import { AuthService } from '../../services/auth.service';
-
 
 @Component({
   selector: 'app-todo-list',
@@ -11,9 +7,7 @@ import { AuthService } from '../../services/auth.service';
 })
 export class TodoListComponent {
 
-  constructor(private router: Router,
-    private tasksService: TasksService,
-    private authService: AuthService) { }
+  constructor( ) { }
 
 
  

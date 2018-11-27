@@ -22,13 +22,7 @@ To run this project:
 Open terminal in folder: Backend, and then install it locally using npm:
 
 ```
-$ npm install --save-dev babel-watch
-$ npm install --save-dev babel-core
-$ npm install babel-preset-env --save
-$ npm install express
-$ npm install cors
-$ npm install body-parser
-$ npm install mongoose
+$ npm install 
 $ npm run dev
 ```
 
@@ -38,7 +32,6 @@ Open terminal in folder: ToDoList, and then install it locally using npm:
 
 ```
 $ npm install 
-$ npm install -g @angular/cli
 $ ng serve --open
 ```
 ## Have a nice use!

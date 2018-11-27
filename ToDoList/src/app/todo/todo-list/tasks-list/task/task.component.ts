@@ -36,7 +36,6 @@ export class TaskComponent implements OnInit {
       .sort((a, b) : any => {
         return a.sort - b.sort;
       })
-      console.log(this.tasksList);
     })
   }
 
@@ -83,9 +82,7 @@ export class TaskComponent implements OnInit {
     console.log(event.currentIndex);
     this.tasksList.forEach( (value, index) => {
       value.sort = index;
-      this.tasksService.changeTask(value).subscribe(s => {
-        console.log(s);
-      })
+      this.tasksService.changeTask(value).subscribe();
     });
   }
 }

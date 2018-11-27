@@ -37,7 +37,6 @@ export class TaskDescriptionComponent implements OnInit {
       this.tasksService.postTask(task).subscribe((task) => {
         this.taskToSend = task;
         this.tasksService.sendTask(this.taskToSend);
-        console.log(task);
       });
       this.newTask = "";
       this.newTask = ""; 

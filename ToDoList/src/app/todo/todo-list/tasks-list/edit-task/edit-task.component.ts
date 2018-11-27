@@ -1,7 +1,7 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { Task } from 'src/app/models/task';
 import { TasksService } from 'src/app/services/tasksService.service';
-import { ActivatedRoute, Router } from '@angular/router';
+import { ActivatedRoute } from '@angular/router';
 import { AuthService } from 'src/app/services/auth.service';
 import { User } from 'firebase';
 
@@ -19,7 +19,6 @@ export class EditTaskComponent implements OnInit {
 
   constructor(
     private tasksService: TasksService,
-    private router: Router,
     private route: ActivatedRoute,
     public authService: AuthService
   ) { }
@@ -57,7 +56,6 @@ export class EditTaskComponent implements OnInit {
     });
     this.tasksService.changeTask(task).subscribe();
     alert("Change saved!");
-    console.log(task);
   }
 
   userIdForChange(id) {

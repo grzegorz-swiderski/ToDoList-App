@@ -1,6 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { TasksService } from 'src/app/services/tasksService.service';
-import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-tasks-list',
