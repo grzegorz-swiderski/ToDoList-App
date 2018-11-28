@@ -7,5 +7,7 @@ export interface Task {
     text: string,
     status: string,
     sort: number,
-    create: string
+    create: Date,
+    timer: number,
+    intervalId: number
 }

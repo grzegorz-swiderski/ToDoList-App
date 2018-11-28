@@ -23,7 +23,7 @@ const routes: Routes = [
       ],
   },
   {
-    path: 'todo', component: TodoComponent, canActivate: [AuthGuardService], children:
+    path: 'todo', component: TodoComponent, canActivate: [AuthGuardService ],  children:
       [
         { path: '', redirectTo: 'todoList', pathMatch: 'full' },
         {

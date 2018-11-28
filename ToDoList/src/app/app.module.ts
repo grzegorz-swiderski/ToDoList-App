@@ -34,6 +34,7 @@ import { UserPanelComponent } from './todo/user-panel/user-panel.component';
 import { TaskTableComponent } from './todo/todo-list/task-table/task-table.component';
 import { DragDropModule } from '@angular/cdk/drag-drop';
 import { MatSidenavModule } from '@angular/material/sidenav';
+import { StoperPipe } from './pipe/stoper.pipe';
 
 @NgModule({
   declarations: [
@@ -50,7 +51,8 @@ import { MatSidenavModule } from '@angular/material/sidenav';
     NavbarComponent,
     TodoComponent,
     UserPanelComponent,
-    TaskTableComponent
+    TaskTableComponent,
+    StoperPipe
   ],
   imports: [
     BrowserModule,
@@ -77,7 +79,7 @@ import { MatSidenavModule } from '@angular/material/sidenav';
     AppRoutingModule,
     DragDropModule
   ],
-  providers: [TasksService, AuthService, AuthGuardService],
+  providers: [TasksService, AuthService, AuthGuardService ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

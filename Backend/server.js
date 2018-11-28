@@ -54,6 +54,8 @@ router.route('/tasks/update/:id').post((req, res) => {
         task.status = req.body.status;
         task.sort = req.body.sort;
         task.create = req.body.create;
+        task.timer = req.body.timer;
+        task.intervalId = req.body.intervalId;
         task.save()
         .then(task => {
             res.json('Update done');

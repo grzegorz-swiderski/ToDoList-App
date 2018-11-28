@@ -13,15 +13,20 @@ p{
 
 .status{
     width: 110%;
-    margin-left: 8px;
+    padding-left: 5px;
+}
+
+.chooseUser{
+    width: 150%;
 }
 
 .full{
-    width: 98%;
-    margin-left: 10px;
-    margin-right: 0;
+    width: 95%;
 }
 
+.dataPicker{
+    width: 95%;
+}
 
 .btnContainer{
     padding-bottom: 10px;
@@ -53,7 +58,32 @@ p{
     }
 
     .full{
-        width: 90%;
+        width: 97%;
+        padding-left: 5px;
+    }
+
+    .status{
+        width: 97%;
+    }
+    
+    .chooseUser{
+        width: 97%;
+        padding-left: 5px;
+    }
+
+    .dataPicker{
+        width: 97%;
+        padding-left: 5px;
+    }
+
+    .btnContainer{
+        display: flex;
+        justify-content: flex-end;
+    }
+
+    .mat-mini-fab{
+        margin-left: 0px;
+        margin-right: 10px;
     }
 
 }
@@ -109,11 +139,67 @@ p{
 
 }
 
+@media (min-width: 768px) and (max-width: 991px) {
+
+    mat-card{
+        width: 90%;
+        margin-left: 4%;
+    }
+
+    .status{
+        width: 140%;
+    }
+
+    .chooseUser{
+        width: 100%;
+    }
+
+    .dataPicker{
+        width: 120%;
+    }
+
+    .btnContainer{
+        display: flex;
+        justify-content: flex-end;
+    }
+
+    .mat-mini-fab {
+        margin-left: 0px;
+        margin-right: 20px;
+    }
+
+}
+
+@media (min-width: 992px) and (max-width: 1199px)  {
+
+    .chooseUser{
+        width: 95%;
+    }
+
+    .btnContainer{
+        display: flex;
+        justify-content: flex-end;
+    }
+
+    .mat-mini-fab {
+        margin-left: 0px;
+        margin-right: 20px;
+    }
+}
+
 @media (min-width: 992px) and (max-width: 1199px) and (orientation: landscape) {
 
     mat-card{
         width: 94%;
         margin-left: 2%;
+    }
+
+    .status{
+        width: 140%;
+    }
+
+    .dataPicker{
+        width: 100%;
     }
 
 }

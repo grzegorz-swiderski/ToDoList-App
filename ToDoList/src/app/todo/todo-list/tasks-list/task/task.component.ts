@@ -17,6 +17,7 @@ export class TaskComponent implements OnInit {
   task: Task;
   user = this.authService.user;
   usersList: Array<User>;
+  intervalId : any;
 
   constructor( public tasksService: TasksService, private router: Router, public authService: AuthService) { }
 
@@ -79,10 +80,29 @@ export class TaskComponent implements OnInit {
 
   drop(event: CdkDragDrop<Array<Task>>) {
     moveItemInArray(this.tasksList, event.previousIndex, event.currentIndex);
-    console.log(event.currentIndex);
     this.tasksList.forEach( (value, index) => {
       value.sort = index;
       this.tasksService.changeTask(value).subscribe();
     });
+  }
+
+  startTimer(task: Task){
+    this.runing(task);
+  }
+
+  stopTimer(task: Task) {
+    console.log(task);
+    clearInterval(task.intervalId);
+    this.tasksService.changeTask(task).subscribe();
+  }
+
+  runing(task){
+    task.intervalId = setInterval(() => {
+      this.getTime(task);
+    }, 1000)
+  }
+
+  getTime(task){
+    task.timer++;
   }
 }

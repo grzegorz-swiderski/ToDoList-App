@@ -52,7 +52,9 @@ export class EditTaskComponent implements OnInit {
       text: this.task.text,
       status: this.task.status,
       sort: this.task.sort,
-      create: this.task.create
+      create: this.task.create,
+      timer: this.task.timer,
+      intervalId: this.task.intervalId
     });
     this.tasksService.changeTask(task).subscribe();
     alert("Change saved!");

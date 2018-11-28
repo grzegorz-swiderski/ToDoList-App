@@ -16,14 +16,14 @@
     min-height: 1px;
     font-size: 18px;
     display: flex;
-    justify-content: right;
+    justify-content: left;
     align-items: center;
     height: 50px;
 }
 
 p{
-    margin: 0;
-    padding-left: 10px;
+    margin-bottom: 0;
+    padding-left: 5px;
 }
 
 @media (max-width: 767px){
@@ -37,15 +37,13 @@ p{
 
     .taskTable{
         display: block;
-        padding-top: 210px;
-        margin-left: 20px;
-        left: 0;
-        width: 98%;
-        margin-left: 10px;
+        padding-top: 200px;
+        left: 1.5%;
+        width: 96%;  
     }
 
     .table{
-        width: 98%;
+        width: 100%;
         padding-left: 10px;
     }
 
@@ -58,9 +56,10 @@ p{
 
     .taskTable{
         display: block;
-        padding-top: 150px;
-        left: 16%;
-        width: 83%;
+        padding-top: 180px;
+        left: 2%;
+        width: 95%;
+        
     }
 
     .table{

@@ -20,7 +20,6 @@ export class AuthService {
     angularFire.authState.subscribe(user => {
       this.user = user;
       console.log(user);
-
     })
   }
 

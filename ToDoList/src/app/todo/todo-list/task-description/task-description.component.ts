@@ -31,7 +31,9 @@ export class TaskDescriptionComponent implements OnInit {
       text: this.newTask, 
       status: "Ready",
       sort: 0,
-      create: new Date().toLocaleString()
+      create: new Date(),
+      timer: 0,
+      intervalId: 0
     });
     if (task.text) {
       this.tasksService.postTask(task).subscribe((task) => {

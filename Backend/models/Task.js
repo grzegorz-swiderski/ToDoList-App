@@ -19,7 +19,13 @@ let Task = new Schema ({
         type: Number
     },
     create: {
-        type: String
+        type: Date
+    },
+    timer: {
+        type: Number
+    },
+    intervalId: {
+        type: Number
     }
 })
 

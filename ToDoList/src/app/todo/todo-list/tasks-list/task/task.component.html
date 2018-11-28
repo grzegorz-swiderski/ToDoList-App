@@ -2,7 +2,7 @@
   <div class="col-12" cdkDropList (cdkDropListDropped)="drop($event)">
     <mat-card *ngFor="let task of tasksList" cdkDrag [cdkDragData]="task">
       <div class="row">
-        <div class="col-12 col-sm-2 col-md-2 col-lg-2 col-xl-1">
+        <div class="col-12 col-sm-2 col-md-1 col-lg-1 col-xl-1">
           <div [ngSwitch]="task.status">
             <div *ngSwitchCase="'Ready'">
               <div class="status" [ngStyle]="{'background-color': '#FBC02D'}">
@@ -26,22 +26,37 @@
             </div>
           </div>
         </div>
-        <div class="col-12 col-sm-3 col-md-3 col-lg-3 col-xl-4 taskText">
+        <div class="col-12 col-sm-2 col-md-3 col-lg-3 col-xl-3 taskText">
           <p [ngStyle]="{'font-style': 'italic'}" class="taskData">{{task.text}}</p>
         </div>
-        <div class="col-12 col-sm-2 col-md-2 col-lg-2 col-xl-3 taskText">
+        <div class="col-12 col-sm-2 col-md-2 col-lg-2 col-xl-2 taskText">
           <p class="taskData">{{task.userName}}</p>
         </div>
-        <div class="col-12 col-sm-2 col-md-3 col-lg-3 col-xl-2">
-          <p class="taskData">{{task.create}}</p>
+        <div class="col-12 col-sm-2 col-md-2 col-lg-2 col-xl-2 taskText">
+          <p class="taskData">{{task.create | date: 'dd.MM.yyyy' }}</p>
         </div>
-        <div class="offset-6 col-6 offset-sm-0 col-sm-3 offset-md-0 col-md-1 col-lg-1 col-xl-2 btnContainer">
-          <button [routerLink]="[task._id]" mat-mini-fab matTooltip="Edit Task" color="primary">
-            <i class="material-icons">edit</i>
-          </button>
-          <button (click)="deleteTask(task)" mat-mini-fab matTooltip="Delete Task" color="primary">
-            <i class="material-icons">delete_sweep</i>
-          </button>
+        <div class="col-12 col-sm-2 col-md-2 col-lg-2 col-xl-1 taskText">
+         <p class="taskData">{{task.timer | stoper }}</p>
+        </div>
+        <div class="col-12 col-sm-2 col-md-2 col-lg-2 col-xl-3 btnContainer">
+          <div class="row">
+            <div class="col-7 col-sm-12 col-md-12 col-lg-12 col-xl-6 stoperBtn">
+              <button (click)="startTimer(task)" mat-mini-fab matTooltip="Time Start" color="primary">
+                <i class="material-icons">play_arrow</i>
+              </button>
+              <button (click)="stopTimer(task)" mat-mini-fab matTooltip="Time Stop" color="primary">
+                <i class="material-icons">pause</i>
+              </button>
+            </div>
+            <div class="col-5 col-sm-12 col-md-12 col-lg-12 col-xl-6 menuBtn">
+              <button [routerLink]="[task._id]" mat-mini-fab matTooltip="Edit Task" color="primary">
+                <i class="material-icons">edit</i>
+              </button>
+              <button (click)="deleteTask(task)" mat-mini-fab matTooltip="Delete Task" color="primary">
+                <i class="material-icons">delete_sweep</i>
+              </button>
+            </div>
+          </div>
         </div>
       </div>
     </mat-card>

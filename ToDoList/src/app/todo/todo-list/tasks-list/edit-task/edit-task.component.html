@@ -10,8 +10,8 @@
       <div class="col-12">
         <p>Edit task</p>
       </div>
-      <div class="col-12 col-sm-2 col-md-2 col-lg-2 col-xl-1">
-        <mat-form-field class="status full">
+      <div class="col-12 col-sm-2 col-md-1 col-lg-1 col-xl-1">
+        <mat-form-field class="status">
           <mat-select [(ngModel)]="task.status">
             <mat-option *ngFor="let status of statuses" [value]="status">
               {{status}}
@@ -19,13 +19,13 @@
           </mat-select>
         </mat-form-field>
       </div>
-      <div class="col-12 col-sm-3 col-md-3 col-lg-3 col-xl-4">
+      <div class="col-12 col-sm-2 col-md-3 col-lg-3 col-xl-3">
         <mat-form-field class="full">
           <input [(ngModel)]="task.text" matInput>
         </mat-form-field>
       </div>
-      <div class="col-12 col-sm-2 col-md-2 col-lg-2 col-xl-2" [ngStyle]="{'padding-left': '10px'}">
-        <mat-form-field class="full">
+      <div class="col-12 col-sm-2 col-md-2 col-lg-2 col-xl-1">
+        <mat-form-field class="chooseUser">
           <mat-select [(ngModel)]="task.userName">
             <mat-option *ngFor="let user of usersList" [(value)]="user.userName" (click)="userIdForChange(user.userId)">
               {{user.userName}}
@@ -33,7 +33,14 @@
           </mat-select>
         </mat-form-field>
       </div>
-      <div class="offset-6 col-6 offset-sm-2 col-sm-3 offset-md-2 col-md-3 ofsett-lg-2 col-lg-3 offset-xl-3 col-xl-2 btnContainer">
+      <div class="col-12 col-sm-2 col-md-2 col-lg-2 offset-xl-1 col-xl-2">
+        <mat-form-field class="dataPicker">
+          <input matInput [matDatepicker]="picker"[(ngModel)]="task.create">
+          <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+          <mat-datepicker #picker></mat-datepicker>
+        </mat-form-field>
+      </div>
+      <div class="offset-6 col-6 offset-sm-1 col-sm-3 offset-md-1 col-md-3 ofsett-lg-1 col-lg-3 offset-xl-2 col-xl-2 btnContainer">
         <button mat-mini-fab [routerLink]="['/todo']" matTooltip="Go back to Task List" color="primary">
           <i class="material-icons">arrow_back</i>
         </button>
@@ -51,7 +58,7 @@
       <div class="col-12">
         <p>Edit task</p>
       </div>
-      <div class="col-12 col-sm-2 col-md-2 col-lg-2 col-xl-1">
+      <div class="col-12 col-sm-2 col-md-1 col-lg-1 col-xl-1">
         <mat-form-field class="status full">
           <mat-select [(ngModel)]="task.status">
             <mat-option *ngFor="let status of statuses" [value]="status">
@@ -60,12 +67,12 @@
           </mat-select>
         </mat-form-field>
       </div>
-      <div class="col-12 col-sm-3 col-md-3 col-lg-3 col-xl-4">
+      <div class="col-12 col-sm-2 col-md-3 col-lg-3 col-xl-3">
         <mat-form-field class="full">
           <input [(ngModel)]="task.text" matInput>
         </mat-form-field>
       </div>
-      <div class="offset-6 col-6 offset-sm-4 col-sm-3 offset-md-4 col-md-3 ofsett-lg-4 col-lg-3 offset-xl-5 col-xl-2 btnContainer">
+      <div class="offset-6 col-6 offset-sm-5 col-sm-3 offset-md-5 col-md-3 ofsett-lg-5 col-lg-3 offset-xl-6 col-xl-2 btnContainer">
         <button mat-mini-fab [routerLink]="['/todo']" matTooltip="Go back to Task List" color="primary">
           <i class="material-icons">arrow_back</i>
         </button>

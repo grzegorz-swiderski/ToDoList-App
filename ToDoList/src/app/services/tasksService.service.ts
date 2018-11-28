@@ -5,8 +5,6 @@ import { Task } from '../models/task';
 import { NewUser } from 'src/app/models/newUser';
 import { development } from '../environment/development';
 import { User } from 'firebase';
-import { AuthService } from './auth.service';
-
 
 @Injectable({
   providedIn: 'root'
