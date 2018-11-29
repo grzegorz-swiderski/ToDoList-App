@@ -15,6 +15,13 @@ export class AuthGuardService implements CanActivate {
     private angularFire: AngularFireAuth) { }
 
   canActivate(): Observable<boolean> {
-    return this.angularFire.authState.pipe(map(user => user !== null));
-  }
+    return this.angularFire.authState.pipe(map(user => {
+      if(user !== null){
+        return true
+      };
+      this.router.navigate(['./user']);
+        return false;
+      })
+    )
+  }   
 }
